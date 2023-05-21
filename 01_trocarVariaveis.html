@@ -6,10 +6,21 @@
     */
 
     //ENTRADA
+    let inteiro1 = prompt('Insira um número inteiro').trim();
+    let inteiro2 = prompt('Insira outro número inteiro').trim();
+    const antes = `Antes: ${inteiro1}, ${inteiro2}`;
+   
+   
+
 
     //PROCESSAMENTO
+    const auxiliar = inteiro1;
+    inteiro1 = inteiro2;
+    inteiro2 = auxiliar;
+    
+    
 
     //SAÍDA
+    alert(antes + `\nDepois: ${inteiro1}, ${inteiro2}`);
 
-    
 </script>
