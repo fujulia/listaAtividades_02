@@ -11,9 +11,47 @@
     */
 
     //ENTRADA
+    const telefone = prompt('Telofonou para vítima? RESPONDA SIM OU NÃO').toLowerCase();
+    const local = prompt('Esteve no local do crime? RESPONDA SIM OU NÃO').toLowerCase();
+    const moradia = prompt('Mora perto da vítima? RESPONDA SIM OU NÃO').toLowerCase();
+    const dividas = prompt('Devia para vítima? RESPONDA SIM OU NÃO').toLowerCase();
+    const trabalho = prompt('Já trabalhou com a vítima? RESPONDA SIM OU NÃO').toLowerCase();
+
+    //const b_telefone = telefone==='sim'; 
+    //const b_local = local==='sim';
+    //const b_moradia = moradia ==='sim';
+    //const b_dividas = dividas ==='sim';
+   // const b_trabalho = trabalho ==='sim';
+
+
+    let contador = 0;
 
     //PROCESSAMENTO
+    if(telefone==='sim'){
+        contador++; // = contador + 1;
+    }
+    if(local==='sim'){
+        contador++;
+    }
+    if(moradia ==='sim'){
+        contador++;
+    }
+    if(dividas ==='sim'){
+        contador++;
+    }
+    if(trabalho ==='sim'){
+        contador++;
+    }
 
-    //SAÍDA
+    if(contador === 2){
+        alert("SUPEITO");
+    }
+    if(contador >= 3 && contador <= 4){
+        alert("CÚMPLICE");
+    }
+    if(contador === 5){
+        alert("ASSASINO");
+    }
+    // //SAÍDA
 
 </script>

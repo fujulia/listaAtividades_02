@@ -11,9 +11,20 @@
     */
 
     //ENTRADA
+    const numero = Number(prompt('Insira um número inteiro menor que 1000'))
 
 
     //PROCESSAMENTO
+    const centenas = Math.floor( numero/100);
+    const dezenas = Math.floor((numero%100)/10);
+    const unidades = ((numero%100)%10);
+
+    if(numero<1000){
+        alert(`Centenas: ${centenas} \nDezenas: ${dezenas} \nUnidades: ${unidades}.`)
+    }
+    else{
+        alert(`Valor inválido`)
+    }
 
     
     //SAÍDA
