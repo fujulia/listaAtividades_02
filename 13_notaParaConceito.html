@@ -9,11 +9,33 @@
     // Entre 5.9 e zero            E
 
     // Entrada
+    const nota = Number(prompt('Insira sua nota').trim().replace(",","."));
 
     
     // Processamento
+    let texto = ""
+
+    if(nota<=10 && nota>=9){
+        texto = texto +` Você tirou A .`;
+    }
+    else if(nota<=8.9 && nota>=8){
+        texto = texto + `Você tirou B.`;
+    }
+    else if(nota<=7.9 && nota>=7){
+        texto = texto +`Você tirou C.`;
+    }
+    else if(nota<=6.9 && nota>=6){
+        texto = texto + `Você tirou D.`;
+    }
+    else if(nota<=5.9 && nota>=0){
+        texto = texto +`Você tirou E`;
+    }
+    else{
+        texto= texto+`Valor invalido.`;
+    }
 
     
     // Saída
+    alert(texto);
 
 </script>
