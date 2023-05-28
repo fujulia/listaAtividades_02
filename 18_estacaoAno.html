@@ -7,17 +7,42 @@
 
     //ENTRADA
     const hemisferio = prompt('Em qual hemisfério você está?').toLowerCase();
-    const mesAtual = prompt('Qual a data? Escreva em formato dd/mm/aaaa').toLowerCase();
+    const mesAtual = prompt('Qual o mês atual?').toLowerCase();
 
 
     //PROCESSAMENTO
-    const dia = mesAtual.substring(0,2);
-    const mes = mesAtual.substring();
-    
+    if(hemisferio==='sul'){
+        if(mesAtual=== 'janeiro' || mesAtual==='fevereiro' || mesAtual==='março'){
+            alert(`É verão.`);
+        }
+        if(mesAtual==='abril'|| mesAtual==='maio'|| mesAtual==='junho'){
+            alert(`É outono.`);
+        }
+        if(mesAtual=== 'julho' || mesAtual==='agosto'|| mesAtual==='setembro'){
+            alert(`É inverno.`);
+        }
+        if(mesAtual==='outubro'|| mesAtual==='novembro'|| mesAtual==='dezembro'){
+            alert(`É primavera.`);
+        }
+    }
+    if(hemisferio==='norte'){
+        if(mesAtual=== 'janeiro' || mesAtual==='fevereiro' || mesAtual==='março'){
+            alert(`É inverno.`);
+        }
+        if(mesAtual==='abril'|| mesAtual==='maio'|| mesAtual==='junho'){
+            alert(`É primavera.`);
+        }
+        if(mesAtual=== 'julho' || mesAtual==='agosto'|| mesAtual==='setembro'){
+            alert(`É verão.`);
+        }
+        if(mesAtual==='outubro'|| mesAtual==='novembro'|| mesAtual==='dezembro'){
+            alert(`É outono.`);
+        }
+    }
 
     
     //SAÍDA
-    alert(`${mes}`);
+
 
 
 </script>
