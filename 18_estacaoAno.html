@@ -15,29 +15,33 @@
         if(mesAtual=== 'janeiro' || mesAtual==='fevereiro' || mesAtual==='março'){
             alert(`É verão.`);
         }
-        if(mesAtual==='abril'|| mesAtual==='maio'|| mesAtual==='junho'){
+        else if(mesAtual==='abril'|| mesAtual==='maio'|| mesAtual==='junho'){
             alert(`É outono.`);
         }
-        if(mesAtual=== 'julho' || mesAtual==='agosto'|| mesAtual==='setembro'){
+        else if(mesAtual=== 'julho' || mesAtual==='agosto'|| mesAtual==='setembro'){
             alert(`É inverno.`);
         }
-        if(mesAtual==='outubro'|| mesAtual==='novembro'|| mesAtual==='dezembro'){
+        else if(mesAtual==='outubro'|| mesAtual==='novembro'|| mesAtual==='dezembro'){
             alert(`É primavera.`);
         }
     }
-    if(hemisferio==='norte'){
+    else if(hemisferio==='norte'){
         if(mesAtual=== 'janeiro' || mesAtual==='fevereiro' || mesAtual==='março'){
             alert(`É inverno.`);
         }
-        if(mesAtual==='abril'|| mesAtual==='maio'|| mesAtual==='junho'){
+        else if(mesAtual==='abril'|| mesAtual==='maio'|| mesAtual==='junho'){
             alert(`É primavera.`);
         }
-        if(mesAtual=== 'julho' || mesAtual==='agosto'|| mesAtual==='setembro'){
+        else if(mesAtual=== 'julho' || mesAtual==='agosto'|| mesAtual==='setembro'){
             alert(`É verão.`);
         }
-        if(mesAtual==='outubro'|| mesAtual==='novembro'|| mesAtual==='dezembro'){
+        else if(mesAtual==='outubro'|| mesAtual==='novembro'|| mesAtual==='dezembro'){
             alert(`É outono.`);
         }
+    }
+
+    else{
+        alert(`Valor Inválido`);
     }
 
     

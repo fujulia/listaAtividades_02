@@ -7,9 +7,25 @@
     // - cães grandes: fator 7.
 
     // Entrada
-
+    const idade = Number(prompt('Qual a idade do seu cão?').trim());
+    const porte = prompt('Qual o parte do seu cão? RESPONDA PEQUENO, MÉDIO OU GRANDE.').trim().toLowerCase();
     
     // Processamento
+    if(porte==='pequeno'){
+        const idadeP = idade*5;
+        alert(`Idade humana do seu cão: ${idadeP} anos`);
+    }
+    else if(porte==='médio' ){
+        const idadeM = idade*6;
+        alert(`Idade humana do seu cão: ${idadeM} anos`);
+    }
+    else if(porte==='grande' ){
+        const idadeG = idade*7;
+        alert(`Idade humana do seu cão: ${idadeG} anos`);
+    }
+    else{
+        alert(`Valor Inválido` );
+    }
 
     
     // Saída
