@@ -1,128 +1,128 @@
 <script>
-    /*
-    //PROBLEMA
-    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
-    - par ou ímpar;
-    - positivo ou negativo;
-    - inteiro ou decimal.
-    */
+  /*
+  //PROBLEMA
+  Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+  - par ou ímpar;
+  - positivo ou negativo;
+  - inteiro ou decimal.
+  */
 
-    //ENTRADA
-    const numero1 = Number(prompt('Insira um número').trim());
-    const numero2 = Number(prompt('Insira um número').trim());
-    const operacao = prompt('Qual operção você deseja? Digite + para soma, - para subtração, * para multiplicação e / para divisão');
-  
+  //ENTRADA
+  const numero1 = Number(prompt('Insira um número').trim());
+  const numero2 = Number(prompt('Insira um número').trim());
+  const operacao = prompt('Qual operção você deseja? Digite + para soma, - para subtração, * para multiplicação e / para divisão');
 
-    //PROCESSAMENTO
-    const soma = numero1+numero2;
-    const subtracao = numero1- numero2;
-    const multiplicacao = numero1*numero2;
-    const divisao = numero1/numero2
 
-    let texto = "";
+  //PROCESSAMENTO
+  const soma = numero1 + numero2;
+  const subtracao = numero1 - numero2;
+  const multiplicacao = numero1 * numero2;
+  const divisao = numero1 / numero2
 
-    if(operacao==='+'){
-        texto = texto + `Soma ${numero1} + ${numero2} = ${soma}\n`;
+  let texto = "";
 
-       if(soma % 2 === 0){
-         texto = texto + "Par\n";
-       }
-       else{
-         texto = texto + "Ímpar\n";
-       }
+  if (operacao === '+') {
+    texto = texto + `Soma ${numero1} + ${numero2} = ${soma}\n`;
 
-       if(soma > 0){
-        texto = texto + "Positivo\n";
-       }
-       else{
-         texto = texto + "Negativo\n";
-       }
-
-       if(Number.isInteger(soma)){
-            texto = texto + "Inteiro";
-       }
-       else{
-            texto = texto + "Decimal";
-       }
-
+    if (soma % 2 === 0) {
+      texto = texto + "Par\n";
     }
-     
-    if(operacao==='-'){
-        texto = texto + `Subtração ${numero1} - ${numero2} = ${subtracao}\n`;
-
-       if(subtracao% 2 === 0){
-         texto = texto + "Par\n";
-       }
-       else{
-         texto = texto + "Ímpar\n";
-       }
-
-       if(subtracao > 0){
-        texto = texto + "Positivo\n";
-       }
-       else{
-         texto = texto + "Negativo\n";
-       }
-
-       if(Number.isInteger(subtracao)){
-            texto = texto + "Inteiro";
-       }
-       else{
-            texto = texto + "Decimal";
-       }
+    else {
+      texto = texto + "Ímpar\n";
     }
 
-    if(operacao==='*'){
-        texto = texto + `Multiplicação ${numero1} * ${numero2} = ${multiplicacao}\n`;
-
-       if(multiplicacao % 2 === 0){
-         texto = texto + "Par\n";
-       }
-       else{
-         texto = texto + "Ímpar\n";
-       }
-
-       if(multiplicacao > 0){
-        texto = texto + "Positivo\n";
-       }
-       else{
-         texto = texto + "Negativo\n";
-       }
-
-       if(Number.isInteger(multiplicacao)){
-            texto = texto + "Inteiro";
-       }
-       else{
-            texto = texto + "Decimal";
-       }
+    if (soma > 0) {
+      texto = texto + "Positivo\n";
+    }
+    else {
+      texto = texto + "Negativo\n";
     }
 
-    if(operacao==='/'){
-        texto = texto + `Divisão ${numero1} / ${numero2} = ${divisao}\n`;
-
-       if(divisao % 2 === 0){
-         texto = texto + "Par\n";
-       }
-       else{
-         texto = texto + "Ímpar\n";
-       }
-
-       if(divisao > 0){
-        texto = texto + "Positivo\n";
-       }
-       else{
-         texto = texto + "Negativo\n";
-       }
-
-       if(Number.isInteger(divisao)){
-            texto = texto + "Inteiro";
-       }
-       else{
-            texto = texto + "Decimal";
-       }
+    if (Number.isInteger(soma)) {
+      texto = texto + "Inteiro";
     }
-    alert(texto);
-    
+    else {
+      texto = texto + "Decimal";
+    }
+
+  }
+
+  if (operacao === '-') {
+    texto = texto + `Subtração ${numero1} - ${numero2} = ${subtracao}\n`;
+
+    if (subtracao % 2 === 0) {
+      texto = texto + "Par\n";
+    }
+    else {
+      texto = texto + "Ímpar\n";
+    }
+
+    if (subtracao > 0) {
+      texto = texto + "Positivo\n";
+    }
+    else {
+      texto = texto + "Negativo\n";
+    }
+
+    if (Number.isInteger(subtracao)) {
+      texto = texto + "Inteiro";
+    }
+    else {
+      texto = texto + "Decimal";
+    }
+  }
+
+  if (operacao === '*') {
+    texto = texto + `Multiplicação ${numero1} * ${numero2} = ${multiplicacao}\n`;
+
+    if (multiplicacao % 2 === 0) {
+      texto = texto + "Par\n";
+    }
+    else {
+      texto = texto + "Ímpar\n";
+    }
+
+    if (multiplicacao > 0) {
+      texto = texto + "Positivo\n";
+    }
+    else {
+      texto = texto + "Negativo\n";
+    }
+
+    if (Number.isInteger(multiplicacao)) {
+      texto = texto + "Inteiro";
+    }
+    else {
+      texto = texto + "Decimal";
+    }
+  }
+
+  if (operacao === '/') {
+    texto = texto + `Divisão ${numero1} / ${numero2} = ${divisao}\n`;
+
+    if (divisao % 2 === 0) {
+      texto = texto + "Par\n";
+    }
+    else {
+      texto = texto + "Ímpar\n";
+    }
+
+    if (divisao > 0) {
+      texto = texto + "Positivo\n";
+    }
+    else {
+      texto = texto + "Negativo\n";
+    }
+
+    if (Number.isInteger(divisao)) {
+      texto = texto + "Inteiro";
+    }
+    else {
+      texto = texto + "Decimal";
+    }
+  }
+  alert(texto);
+
     //SAÍDA
 
 
