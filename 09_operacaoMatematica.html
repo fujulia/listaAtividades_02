@@ -14,111 +14,111 @@
 
 
   //PROCESSAMENTO
-  const soma = numero1 + numero2;
-  const subtracao = numero1 - numero2;
-  const multiplicacao = numero1 * numero2;
-  const divisao = numero1 / numero2
 
   let texto = "";
 
   if (operacao === '+') {
-    texto = texto + `Soma ${numero1} + ${numero2} = ${soma}\n`;
+    const soma = numero1 + numero2;
+    texto = texto + `Soma ${numero1} + ${numero2} = ${soma}.\n`;
 
     if (soma % 2 === 0) {
-      texto = texto + "Par\n";
+      texto = texto + "Par.\n";
     }
     else {
-      texto = texto + "Ímpar\n";
+      texto = texto + "Ímpar.\n";
     }
 
     if (soma > 0) {
-      texto = texto + "Positivo\n";
+      texto = texto + "Positivo.\n";
     }
     else {
-      texto = texto + "Negativo\n";
+      texto = texto + "Negativo.\n";
     }
 
     if (Number.isInteger(soma)) {
-      texto = texto + "Inteiro";
+      texto = texto + "Inteiro.";
     }
     else {
-      texto = texto + "Decimal";
+      texto = texto + "Decimal.";
     }
 
   }
 
   if (operacao === '-') {
-    texto = texto + `Subtração ${numero1} - ${numero2} = ${subtracao}\n`;
+    const subtracao = numero1 - numero2;
+    texto = texto + `Subtração ${numero1} - ${numero2} = ${subtracao}.\n`;
 
     if (subtracao % 2 === 0) {
-      texto = texto + "Par\n";
+      texto = texto + "Par.\n";
     }
     else {
-      texto = texto + "Ímpar\n";
+      texto = texto + "Ímpar.\n";
     }
 
     if (subtracao > 0) {
-      texto = texto + "Positivo\n";
+      texto = texto + "Positivo.\n";
     }
     else {
-      texto = texto + "Negativo\n";
+      texto = texto + "Negativo.\n";
     }
 
     if (Number.isInteger(subtracao)) {
-      texto = texto + "Inteiro";
+      texto = texto + "Inteiro.";
     }
     else {
-      texto = texto + "Decimal";
+      texto = texto + "Decimal.";
     }
   }
 
   if (operacao === '*') {
-    texto = texto + `Multiplicação ${numero1} * ${numero2} = ${multiplicacao}\n`;
+    const multiplicacao = numero1 * numero2;
+    texto = texto + `Multiplicação ${numero1} * ${numero2} = ${multiplicacao}.\n`;
 
     if (multiplicacao % 2 === 0) {
-      texto = texto + "Par\n";
+      texto = texto + "Par.\n";
     }
     else {
-      texto = texto + "Ímpar\n";
+      texto = texto + "Ímpar.\n";
     }
 
     if (multiplicacao > 0) {
-      texto = texto + "Positivo\n";
+      texto = texto + "Positivo.\n";
     }
     else {
-      texto = texto + "Negativo\n";
+      texto = texto + "Negativo.\n";
     }
 
     if (Number.isInteger(multiplicacao)) {
-      texto = texto + "Inteiro";
+      texto = texto + "Inteiro.";
     }
     else {
-      texto = texto + "Decimal";
+      texto = texto + "Decimal.";
     }
   }
 
   if (operacao === '/') {
-    texto = texto + `Divisão ${numero1} / ${numero2} = ${divisao}\n`;
+    const divisao = numero1 / numero2
+    texto = texto + `Divisão ${numero1} / ${numero2} = ${divisao}.\n`;
 
     if (divisao % 2 === 0) {
-      texto = texto + "Par\n";
+      texto = texto + "Par.\n";
     }
     else {
-      texto = texto + "Ímpar\n";
+      texto = texto + "Ímpar.\n";
     }
 
     if (divisao > 0) {
-      texto = texto + "Positivo\n";
+      texto = texto + "Positivo.\n";
     }
     else {
-      texto = texto + "Negativo\n";
+      texto = texto + "Negativo.\n";
     }
 
     if (Number.isInteger(divisao)) {
-      texto = texto + "Inteiro";
+      texto = texto + "Inteiro.";
     }
     else {
-      texto = texto + "Decimal";
+      texto = texto + "Decimal.";
     }
   }
   alert(texto);
