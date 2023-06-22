@@ -8,122 +8,59 @@
   */
 
   //ENTRADA
-  const numero1 = Number(prompt('Insira um número').trim());
-  const numero2 = Number(prompt('Insira um número').trim());
-  const operacao = prompt('Qual operção você deseja? Digite + para soma, - para subtração, * para multiplicação e / para divisão');
-
-
-  //PROCESSAMENTO
-
+  const numero1 = Number(prompt('Insira um número').trim().replace(',','.'));
+  const numero2 = Number(prompt('Insira um número').trim().replace(',','.'));
+  const operacao = prompt('Qual operção você deseja? Digite + para soma, - para subtração, * para multiplicação e / para divisão').trim();
   let texto = "";
-
+  let conta
   if (operacao === '+') {
-    const soma = numero1 + numero2;
-    texto = texto + `Soma ${numero1} + ${numero2} = ${soma}.\n`;
-
-    if (soma % 2 === 0) {
-      texto = texto + "Par.\n";
-    }
-    else {
-      texto = texto + "Ímpar.\n";
-    }
-
-    if (soma > 0) {
-      texto = texto + "Positivo.\n";
-    }
-    else {
-      texto = texto + "Negativo.\n";
-    }
-
-    if (Math.round(soma) === soma) {
-      texto = texto + "Inteiro.";
-    }
-    else {
-      texto = texto + "Decimal.";
-    }
-
+    conta = numero1 + numero2;
+    texto = texto + `Soma ${numero1} + ${numero2} = ${conta}.\n`;
   }
-
-  if (operacao === '-') {
-    const subtracao = numero1 - numero2;
-    texto = texto + `Subtração ${numero1} - ${numero2} = ${subtracao}.\n`;
-
-    if (subtracao % 2 === 0) {
-      texto = texto + "Par.\n";
+  else if (operacao === '-') {
+    conta = numero1 - numero2;
+    texto = texto + `Subtração ${numero1} - ${numero2} = ${conta}.\n`;
+  }
+  else if (operacao === '*') {
+    conta = numero1 * numero2;
+    texto = texto + `Multiplicação ${numero1} * ${numero2} = ${conta}.\n`;
+  }
+  else if (operacao === '/') {
+    conta = numero1 / numero2
+    texto = texto + `Divisão ${numero1} / ${numero2} = ${conta}.\n`;
+  }
+  else {
+    texto = texto + 'Operação Inválida'
+  }
+  if (conta % 2 === 0) {
+    if (conta > 0) {
+      texto = texto + 'Par.\nInteiro.\nPositivo.';
     }
     else {
-      texto = texto + "Ímpar.\n";
-    }
-
-    if (subtracao > 0) {
-      texto = texto + "Positivo.\n";
-    }
-    else {
-      texto = texto + "Negativo.\n";
-    }
-
-    if (Math.round(subtracao) === subtracao) {
-      texto = texto + "Inteiro.";
-    }
-    else {
-      texto = texto + "Decimal.";
+      texto = texto + 'Par.\nInteiro.\nNegativo.';
     }
   }
-
-  if (operacao === '*') {
-    const multiplicacao = numero1 * numero2;
-    texto = texto + `Multiplicação ${numero1} * ${numero2} = ${multiplicacao}.\n`;
-
-    if (multiplicacao % 2 === 0) {
-      texto = texto + "Par.\n";
+  else if (conta % 2 != 0) {
+    if (conta > 0) {
+      if (Number.isInteger(conta)) {
+        texto = texto + 'Ímpar.\nInteiro.\nPositivo';
+      }
+      else {
+        texto = texto + 'Ímpar.\nDecimal.\nPositivo';
+      }
     }
-    else {
-      texto = texto + "Ímpar.\n";
-    }
-
-    if (multiplicacao > 0) {
-      texto = texto + "Positivo.\n";
-    }
-    else {
-      texto = texto + "Negativo.\n";
-    }
-
-    if (Math.round(multiplicacao)=== multiplicacao) {
-      texto = texto + "Inteiro.";
-    }
-    else {
-      texto = texto + "Decimal.";
-    }
-  }
-
-  if (operacao === '/') {
-    const divisao = numero1 / numero2
-    texto = texto + `Divisão ${numero1} / ${numero2} = ${divisao}.\n`;
-
-    if (divisao % 2 === 0) {
-      texto = texto + "Par.\n";
-    }
-    else {
-      texto = texto + "Ímpar.\n";
+    if (conta < 0) {
+      if (Number.isInteger(conta)) {
+        texto = texto + 'Ímpar.\n Inteiro.\n Negativo';
+      }
+      else {
+        texto = texto + 'Ímpar.\n Decimal.\n Negativo';
+      }
     }
 
-    if (divisao > 0) {
-      texto = texto + "Positivo.\n";
-    }
-    else {
-      texto = texto + "Negativo.\n";
-    }
-
-    if (Math.round(divisao) === divisao) {
-      texto = texto + "Inteiro.";
-    }
-    else {
-      texto = texto + "Decimal.";
-    }
   }
   alert(texto);
 
-    //SAÍDA
 
 
 </script>
